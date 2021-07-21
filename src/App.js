@@ -93,12 +93,12 @@ class App extends Component{
   render(){
     return(
       <>
+      <img
+      src={newLogo}
+      alt="pig with butcher cut names in pig latin"
+      className="newLogo"/>
         <h1>Pig Latin Translator</h1>
-        <img
-          src={newLogo}
-          alt="pig with butcher cut names in pig latin"
-          className="newLogo"
-        />
+        <h2>ustinAay andway arahSay areway ethay estbay instructorsway</h2>
         <div className="inputArea">
           <h4>Enter phrase to be translated:</h4>
           {/* user input field - every DOM event that happens in the input will call the handleChange method and update state */}
