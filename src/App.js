@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
-import newLogo from './assets/newLogo.jpeg'
+import newLogo from './assets/newLogo.png'
 
 class App extends Component{
   constructor(props){
@@ -26,7 +26,7 @@ class App extends Component{
     let translatedWordsArray = userInput.map(currentWord => {
       // ACTION ITEM: use "currentWord" as a starting point for your code
     console.log("currentWord:", currentWord)//--->currentWord will the single str we gonna change to get the Pig Latin
-     
+
     let vowelsArray = currentWord.split("").filter(vowel => {
         return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
@@ -52,10 +52,10 @@ class App extends Component{
       return currentWord.slice(currentWord.indexOf("y")) + currentWord.slice(0,(currentWord.indexOf("y"))) + "ay"
     }else{
         //3. else: start with consonants, we gonan return new string
-        return currentWord.slice(vowelIndex) +  currentWord.slice(0, vowelIndex) + "ay"   
+        return currentWord.slice(vowelIndex) +  currentWord.slice(0, vowelIndex) + "ay"
     }
  })
-    
+
    // Remember: console.log is your friend :)
    // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
     // joining the array back to a string of translated words
@@ -65,15 +65,15 @@ class App extends Component{
     // the setState method will take your information from "translatedWords" and update the state object that is displayed to the user
     // no need to change this method
     this.setState({phraseTranslated: translatedWords})
-  
+
   }
 
   restartGame = () => {
     // this method restarts the game by setting the original state
     // ACTION ITEM: when you are ready for your full user experience, delete the test words in phrase so that is assigned an empty string
     this.setState({
-      phrase: "alpha through yummy squeal queen fry",
-      phraseTranslated: "This is where your translated sentence will appear."
+      phrase: "",
+      phraseTranslated: ""
     })
   }
 
@@ -114,7 +114,7 @@ class App extends Component{
           <button onClick={this.restartGame}>Clear</button>
         </div>
         <p>{this.state.phraseTranslated}</p>
-        <footer>Coded by ~your name here~</footer>
+        <footer>Coded by Yan and Arturo</footer>
       </>
     )
   }
